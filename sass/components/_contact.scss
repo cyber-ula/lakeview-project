@@ -1,0 +1,50 @@
+.contact{
+	height:53rem;
+	
+	//background-image:radial-gradient(circle at left top,red, yellow, blue), url(img/
+	//contact-form-img-2.jpg);
+	
+	//background-image:radial-gradient(ellipse closest-corner at 20% 75%,red, yellow, 
+	//blue), url(img/contact-form-img-2.jpg);
+
+	background-image:radial-gradient(circle closest-corner at 75% 52%,transparent 0%, transparent 50%, rgba($primary-light,.4) 50%), url(img/contact-form-img-2.jpg);
+
+	background-size:100%;
+	
+	//background-repeat:no-repeat;
+	
+	background-position:left 50%; 
+
+	//horizontal, 
+	//vertical position, both can do in 
+	//percentage and words,
+	
+	border-radius:3rem;
+	box-shadow:0 1.5rem 4rem rgba($black,.2); 
+
+	//no horizontal, shadow, blur, color, 
+	//opacity
+
+	@include respond(tab-port){
+		background-image:radial-gradient(circle closest-corner at 75% 52%, rgba($primary-light,.4) 0%, rgba($primary-light,.4) 50%, rgba($primary-light,.4) 50%), url(img/contact-form-img-2.jpg);
+		background-size:cover;
+
+	}
+
+
+	&__form{
+		width:50%;
+		padding:6rem;
+
+		@include respond(tab-port){
+		width:100%;
+		text-align:center;
+		padding:3rem;
+		}
+	}
+}
+//radial gradient:::
+//closest-corner
+//closest-side
+//farthest-corner
+//farthest-side
